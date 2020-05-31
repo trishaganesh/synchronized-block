@@ -1,0 +1,13 @@
+public class CounterThread implements Runnable {
+...
+	private final Object mutex = new Object();
+...
+
+	public void run() {
+...
+		synchronized (mutex) {
+			count++;
+		}
+	}
+...
+}
